@@ -55,7 +55,7 @@
           var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":10,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
           $.ajax({
                 // url: 'http://192.168.22.108:8080/',
-                url: 'http://localhost:8080//',
+                url: 'http://localhost:80//',
 
                 // url: 'https://www.muryou-tools.com/test/aaaa.php',
                 type: 'POST',
@@ -72,7 +72,7 @@
             var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":-30,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
             $.ajax({
                   // url: 'http://192.168.22.108:8080/',
-                  url: 'http://localhost:8080//',
+                  url: 'http://localhost:80//',
 
                   // url: 'https://www.muryou-tools.com/test/aaaa.php',
                   type: 'POST',

@@ -61,8 +61,8 @@
       ['w', 'ログ表示(非同期) %s', 'log', 'アラートでログを出力します'],
       [' ', 'websocet:post (同期)', 'post_test'],
       ['w', 'websocet:post (非同期)', 'post_test'],
-      [' ', 'brock:send_test (同期)', 'send_test'],
-      ['w', 'brock:send_test (非同期)', 'send_test'],
+      // [' ', 'brock:send_test (同期)', 'send_test'],
+      // ['w', 'brock:send_test (非同期)', 'send_test'],
     ]
   };
 

@@ -33,8 +33,8 @@
   ext.post_test = function() {
         // Make an AJAX call to the Open Weather Maps API
         $.ajax({
-              url: 'http://192.168.22.108:8080/',
-              // url: 'http://localhost:8080//',
+              // url: 'http://192.168.22.108:8080/',
+              url: 'http://localhost:8080//',
 
               // url: 'https://www.muryou-tools.com/test/aaaa.php',
               type: 'POST',

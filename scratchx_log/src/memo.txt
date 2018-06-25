@@ -1,0 +1,15 @@
+
+## 書き方
+### 参考のリポジトリページ
+http://github.com/soburi/scratchx-websocket/blob/gh-pages/eject-extension.js
+### ScratchXの指定URL
+http://scratchx.org/?url=http://soburi.github.io/scratchx-websocket/eject-extension.js
+
+
+## matae_テストの内容
+### github リポジトリ
+http://github.com/YPEOrg/matae-study/blob/study/20180326/scratchx_log/src/log_extension.js
+
+http://t-matae.github.io/scratchx_log/src/log_extension.js
+### 指定方法
+http://scratchx.org/?url=http://t-matae.github.io/scratchx_log/src/log_extension.js

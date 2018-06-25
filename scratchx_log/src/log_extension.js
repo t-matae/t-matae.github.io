@@ -1,5 +1,4 @@
 (function(ext) {
-
   // コメントは補足の説明なので書かなくてもいいです
 
   // Extension が終了するときに呼ばれる
@@ -48,6 +47,10 @@
               data: {"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":0,"y":0,"z":10,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]},
 
         });
+        // pusher.trigger('my-channel', 'my-event', {
+        //   "message": "hello world"
+        // });
+
     };
     // // postのテストブロック
     ext.move_to_up = function() {
@@ -55,7 +58,7 @@
           var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":10,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
           $.ajax({
                 // url: 'http://192.168.22.108:8080/',
-                url: 'http://localhost:80//',
+                url: 'http://localhost:8080//',
 
                 // url: 'https://www.muryou-tools.com/test/aaaa.php',
                 type: 'POST',
@@ -72,7 +75,7 @@
             var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":-30,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
             $.ajax({
                   // url: 'http://192.168.22.108:8080/',
-                  url: 'http://localhost:80//',
+                  url: 'http://localhost:8080//',
 
                   // url: 'https://www.muryou-tools.com/test/aaaa.php',
                   type: 'POST',
@@ -95,6 +98,7 @@
       [' ', '%s としゃべらせる',               'no_operation', 'ぼく、ユピ坊！'],
       [' ', 'up',         'move_to_up'],
       [' ', 'down',         'move_to_down'],
+      [' ', 'post_test',         'post_test'],
     ],
     menus: {
       move_to_direction: ['顔を上に','顔を下に','顔を右に','顔を左に','体を右に','体を左に'],

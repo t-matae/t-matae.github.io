@@ -39,17 +39,17 @@
               // url: 'https://www.muryou-tools.com/test/aaaa.php',
               type: 'POST',
               dataType: 'json',
-              data: { test: "post_test"},
+              data: {"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":0,"y":0,"z":0,"speed":0,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"true","talk":"ｚｚｚｚｚｚｚｚｚ "}]},"schedule":"* * * * * *","topic":"yupibow1"}]},
 
-              // 通信成功時の処理
-              success: function() {
-                alert('test_post:success');
-              },
-
-              // 通信成功時の処理
-              error: function() {
-                alert('post_test:error');
-              }
+              // // 通信成功時の処理
+              // success: function() {
+              //   alert('test_post:success');
+              // },
+              //
+              // // 通信成功時の処理
+              // error: function() {
+              //   alert('post_test:error');
+              // }
         });
     };
 

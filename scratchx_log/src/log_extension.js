@@ -33,7 +33,7 @@
   };
 
   ext.action_setting = (arg_x,arg_y,arg_z,arg_speed,arg_talk,arg_face) => {
-    let tempate_message = {jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",talk:"初期位置に移動！",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
+    let tempate_message = {jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",talk:"初期位置に移動！",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
     alert(JSON.stringify(tempate_message));
 
     let change_actions = {x:arg_x,y:arg_y,z:arg_z,speed:arg_speed,emotion:arg_face,talk:arg_talk};

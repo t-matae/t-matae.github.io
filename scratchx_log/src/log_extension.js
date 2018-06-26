@@ -23,22 +23,26 @@
   // ブロックの処理
   /////
 
-  // log表示ブロック
+  // no operation
   ext.no_operation = () => {
      // no operation
   };
 
 
-  // log表示ブロック
+  // log表示
   ext.log = function(str) {
-    alert(str);       // ログを出力するだけ
+    alert(str);       // ログをアラート表示するだけ
   };
 
-  // // postのテストブロック
+  //postのテストブロック
   ext.post_test = function() {
         // Make an AJAX call to the Open Weather Maps API
+        // var send_data = JSON.stringify({jobs:[{operation:{startTime:2017-12-22 14:20:38.688,touchFlag:false,actions:[{x:10,y:0,z:0,speed:0.5,emotion:normal,gaze:on,cheeks:red,eyecolor:aqua,complexioncolor:red,transmittance:0,delay:0,reset:false,talk:}]},schedule:* * * * * *,topic:yupibow2}]});
         // var send_data = JSON.stringify({x:10,y:0,z:0});
-        var send_data = JSON.stringify({jobs:[{operation:{startTime:2017-12-22 14:20:38.688,touchFlag:false,actions:[{x:10,y:0,z:0,speed:0.5,emotion:normal,gaze:on,cheeks:red,eyecolor:aqua,complexioncolor:red,transmittance:0,delay:0,reset:false,talk:}]},schedule:* * * * * *,topic:yupibow2}]});
+        // var send_data = JSON.stringify({x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"初期位置！"});
+
+        var send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"初期位置！"}]},schedule:"******",topic:"yupibow1"}]});
+
         $.ajax({
               // url: 'http://192.168.22.108:8080/',
               url: 'http://localhost:8080//',
@@ -53,16 +57,18 @@
     // // postのテストブロック
     ext.move_to_up = function() {
           // Make an AJAX call to the Open Weather Maps API
-          var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":10,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
+          // var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":10,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
+
+          var send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"上に移動！"}]},schedule:"******",topic:"yupibow1"}]});
+
           $.ajax({
                 // url: 'http://192.168.22.108:8080/',
                 url: 'http://localhost:8080//',
 
                 // url: 'https://www.muryou-tools.com/test/aaaa.php',
                 type: 'POST',
-                // dataType: 'json',
-                dataType: 'text',
-                data: { json_data },
+                dataType: 'json',
+                data: send_data,
 
           });
       };
@@ -70,16 +76,17 @@
       // // postのテストブロック
       ext.move_to_down = function() {
             // Make an AJAX call to the Open Weather Maps API
-            var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":-30,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
+
+            // var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":-30,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
+            var send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"下に移動！"}]},schedule:"******",topic:"yupibow1"}]});
+
             $.ajax({
                   // url: 'http://192.168.22.108:8080/',
                   url: 'http://localhost:8080//',
 
-                  // url: 'https://www.muryou-tools.com/test/aaaa.php',
                   type: 'POST',
                   dataType: 'json',
-                  // dataType: 'text',
-                  data: { json_data },
+                  data: send_data,
 
             });
         };

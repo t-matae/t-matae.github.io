@@ -41,7 +41,7 @@
         // var send_data = JSON.stringify({x:10,y:0,z:0});
         // var send_data = JSON.stringify({x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"初期位置！"});
 
-        var send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"初期位置！"}]},schedule:"******",topic:"yupibow1"}]});
+        var send_data = JSON.stringify({jobs:[{operation:{startTime:2017-12-2214:20:38.688,touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"初期位置！"}]},schedule:"******",topic:"yupibow1"}]});
 
         $.ajax({
               // url: 'http://192.168.22.108:8080/',
@@ -59,7 +59,7 @@
           // Make an AJAX call to the Open Weather Maps API
           // var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":10,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
 
-          var send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"上に移動！"}]},schedule:"******",topic:"yupibow1"}]});
+          var send_data = JSON.stringify({jobs:[{operation:{startTime:2017-12-2214:20:38.688,touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"上に移動！"}]},schedule:"******",topic:"yupibow1"}]});
 
           $.ajax({
                 // url: 'http://192.168.22.108:8080/',
@@ -78,7 +78,7 @@
             // Make an AJAX call to the Open Weather Maps API
 
             // var json_data = JSON.stringify({"jobs":[{"operation":{"startTime":"2017-12-22 14:20:38.688","touchFlag":"false","actions":[{"x":-30,"y":0,"z":0,"speed":0.5,"emotion":"normal","gaze":"on","cheeks":"red","eyecolor":"aqua","complexioncolor":"red","transmittance":0,"delay":0,"reset":"false","talk":""}]},"schedule":"* * * * * *","topic":"yupibow2"}]});
-            var send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"下に移動！"}]},schedule:"******",topic:"yupibow1"}]});
+            var send_data = JSON.stringify({jobs:[{operation:{startTime:2017-12-2214:20:38.688,touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:"0",delay:"0",reset:"false",talk:"下に移動！"}]},schedule:"******",topic:"yupibow1"}]});
 
             $.ajax({
                   // url: 'http://192.168.22.108:8080/',

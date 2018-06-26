@@ -48,7 +48,8 @@
   // ユピ坊制御
   // しゃべらせる
   ext.speak_sentences = (sentences) => {
- alert(tempate_json_message);
+    let tempate_json_message = JSON.stringify({jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow2"}]});
+    alert(tempate_json_message);
     var send_data = JSON.stringify(tempate_json_message.replace('sentences',sentences));
     alert(send_data);
 
@@ -89,7 +90,7 @@
   // 顔を下げる
   ext.move_to_down = () => {
 
-    var send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:0,y:-30,z:0,speeeeeed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false",talk:"下に移動！"}]},schedule:"* * * * * *",topic:"yupibow1"}]});
+    var send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:0,y:-30,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false",talk:"下に移動！"}]},schedule:"* * * * * *",topic:"yupibow1"}]});
 
     $.ajax({
       url: 'http://localhost:8080//',

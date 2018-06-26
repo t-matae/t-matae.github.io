@@ -48,7 +48,7 @@
   // ユピ坊制御
   // しゃべらせる
   ext.speak_sentences = (sentences) => {
-    let tempate_json_message = JSON.stringify({jobs:[{operation:{startTime:"2017-12-2214:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]});
+    let tempate_json_message = JSON.stringify({jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:0,y:0,z:0,speed:0.5,emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]});
     // alert(tempate_json_message);
     var send_data = tempate_json_message.replace('sentences',sentences);
     // alert(send_data);

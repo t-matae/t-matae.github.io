@@ -33,86 +33,12 @@
   };
 
 
-  ////////
-  // ユピ坊制御
-
-  // Json 制御用テンプレート
-  let tempate_json_message = JSON.stringify({jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]});
-  // var send_massage = JSON.stringify({jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]});
-
-  let action_tempate = JSON.stringify({actions:{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}});
-
-  // not JSON
-  // let tempate_notjson_message = {jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
-  var send_notjson_massage = {jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
-
-  var send_massage = JSON.stringify({jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:'actions_data_array'},schedule:"******",topic:"yupibow1"}]});
-  let action_json_tempate = JSON.stringify({x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed_vale',emotion:"emotion_type",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"});
-  let action_notjson_tempate = {x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed_vale',emotion:"emotion_type",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"};
-
-  var data = [
-    { name : "taro",
-      exam : {
-        math : 100,
-        lang : 100
-      },
-      grade : "a"
-    },
-    { name : "jiro", exam : { math : 50, lang : 50 }, grade : "c" },
-    { name : "saburo", exam : { math : 10, lang : 10 }, grade : "d" }
-  ];
-
-
-
-  // 顔を上げる
-  ext.move_to_up = () => {
-
-    let send_data = JSON.stringify({jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:0,y:7,z:0,speed:0.5,emotion:"normal",gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false",talk:"上に移動！"}]},schedule:"* * * * * *",topic:"yupibow1"}]});
-
-    $.ajax({
-      url: 'http://localhost:8080//',
-      type: 'POST',
-      dataType: 'json',
-      data: send_data,
-    });
-  };
-
-
-
-  // 動かす
-  ext.move_to_X = (arg_y) => {
-    let send_data = tempate_json_message
-                      .replace('sentences','')
-                      .replace('direction_y',arg_y);
-
-    $.ajax({
-      url: 'http://localhost:8080//',
-      type: 'POST',
-      dataType: 'json',
-      data: send_data,
-    });
-  };
-
-  // テスト機能
-  ext.test_func_button = () => {
-
-    var addData =
-      { name : "shiro", exam : { math : 10, lang : 100 }, grade : "b" };
-
-    data.push(addData);
-    alert(JSON.stringify(data));
-    var test = send_massage.replace('actions_data_array',JSON.stringify(data));
-    alert(test);
-
-  };
-
-
-
   ////////////////////
   // 共通変数
   ////////////////////
 
-  // 送信データ変数
+  var send_notjson_massage = {jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
+
   let current_send_templete_data = {
                             x : 0,
                             y : 0,
@@ -132,6 +58,8 @@
   let current_send_data = current_send_templete_data;
   let input_send_data = new Array();
 
+  let http_reqest_url = "http://192.168.22.108:8080/";
+  let local_host_url = "http://localhost:8081/";
 
 
   ////////////////////
@@ -141,7 +69,6 @@
   /////
   // 共有ブロック
   ////
-
 
   // 組み合わせ用ブロック
   ext.multi_setting_button = ( arg_x, arg_y, arg_z, arg_speed, arg_emotion, arg_talk) => {
@@ -192,6 +119,8 @@
 
       $.ajax({
         url: 'http://localhost:8080//',
+        // url: local_host_url,
+        // url: http_reqest_url,
         type: 'POST',
         dataType: 'json',
         data: send_data,
@@ -491,6 +420,7 @@
 
   };
 
+
   // ブロック表示
   var descriptor = {
     blocks: [
@@ -514,7 +444,6 @@
       [' ', '顔を左右に %m.move_to_X_direction 度回す',    'move_to_rotation',   0           ],
       [' ', '気分を %m.emotion_jp_type にする',           'set_emotion',       "normal"     ],
       [' ', 'うごく速さを %m.speed_range にする',          'set_speed',          0.5         ],
-
     ],
     menus: {
       move_to_direction: ['顔を上に','顔を下に','顔を右に','顔を左に','体を右に','体を左に'],

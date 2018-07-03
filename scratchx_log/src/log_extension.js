@@ -471,7 +471,7 @@
       [' ', '顔を上下に %m.move_to_Y_direction 度動かす',  'move_to_updown',     0           ],
       [' ', '体を左右に %m.move_to_Z_direction 度動かす',  'move_to_leftright',  0           ],
       [' ', '顔を左右に %m.move_to_X_direction 度回す',    'move_to_rotation',   0           ],
-      [' ', '気分を %m.emotion_jp_type にする',           'set_emotion',       "normal"     ],
+      [' ', '気分を %m.emotion_jp_type にする',           'set_emotion',       "ふつうの顔"     ],
       [' ', 'うごく速さを %m.speed_range にする',          'set_speed',          0.5         ],
     ],
     menus: {

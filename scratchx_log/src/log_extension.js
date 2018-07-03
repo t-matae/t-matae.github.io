@@ -58,7 +58,7 @@
   let current_send_data = current_send_templete_data;
   let input_send_data = new Array();
 
-  let http_reqest_url = "http://192.168.22.108:8080/";
+  let http_reqest_url = "http://192.168.16.150:8080/";
   let local_host_url = "http://localhost:8081/";
 
 
@@ -119,9 +119,9 @@
       // alert(send_data);
 
       $.ajax({
-        url: 'http://localhost:8080//',
+        // url: 'http://localhost:8080//',
         // url: local_host_url,
-        // url: http_reqest_url,
+        url: http_reqest_url,
         type: 'POST',
         dataType: 'json',
         data: send_data,

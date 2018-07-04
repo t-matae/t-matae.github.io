@@ -456,12 +456,12 @@
       // 共通ブロック
       [' ', ' %m.topic_id に命令を送信', 'message_send_button',         "yupibow1" ],
       [' ', ' 初期設定 ',           'message_clear_button'                    ],
-      ['r', ' Debug : current_input_message ',   'current_input_message_button'            ],
-      ['r', ' Debug : current_message ',         'current_message_button'                  ],
+      // ['r', ' Debug : current_input_message ',   'current_input_message_button'            ],
+      // ['r', ' Debug : current_message ',         'current_message_button'                  ],
 
       // 複合ブロック
       // [' ', ' 顔上下 : %n , 体左右 : %n , 顔傾き : %n , うごく速さ : %n , 表情 : %s , 話す内容 : %s  ',  'multi_setting_button' , 0, 0, 0, 0.0, "normal", "初期値"],
-      [' ', ' X: %m.move_to_X_direction Y: %m.move_to_Y_direction Z: %m.move_to_Z_direction speed: %m.speed_range emotion : %m.emotion_type talk : %s ',  'multi_setting_button' , 0, 0, 0, 0.0, "normal", ""],
+      // [' ', ' X: %m.move_to_X_direction Y: %m.move_to_Y_direction Z: %m.move_to_Z_direction speed: %m.speed_range emotion : %m.emotion_type talk : %s ',  'multi_setting_button' , 0, 0, 0, 0.0, "normal", ""],
 
       [' ', '初期位置から動作開始',                 'move_to_init'                 ],
       [' ', '%s としゃべらせる',           'speak_sentences',            'ぼく、ユピ坊！' ],

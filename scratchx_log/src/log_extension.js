@@ -482,7 +482,7 @@
       speed_range:         [1.0,0.75,0.5,0.25,0.1],
       emotion_type:        ["normal","close","smile","angry","sad"],
       emotion_jp_type:     ["目をとじている顔","スマイル","ふつうの顔","怒っている顔","悲しい顔"],
-      topic_id:            ["yupibow1","yupibow2","yupibow3","yupibow4","yupibow5","yupibow6"]
+      topic_id:            ["yupibow1","yupibow2","yupibow3","yupibow4","yupibow5","yupibow6","80300012","80300013","80300014","80300015","80300016"]
     },
   };
 

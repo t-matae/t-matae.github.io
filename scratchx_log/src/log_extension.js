@@ -58,9 +58,7 @@
   let current_send_data = current_send_templete_data;
   let input_send_data = new Array();
 
-  let http_reqest_url = "http://192.168.16.150:8080/";
-  let local_host_url = "http://localhost:8081/";
-
+  let http_reqest_url = "https://school.yupibow.jp/";
 
   ////////////////////
   // ブロック処理

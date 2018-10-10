@@ -119,7 +119,7 @@
       $.ajax({
         // url: 'http://localhost:8080//',
         // url: local_host_url,
-        url: `${http_reqest_url}/manipulate/${yupibow_id}`,
+        url: `${http_reqest_url}/manipulate`,
         type: 'POST',
         dataType: 'json',
         data: send_data,

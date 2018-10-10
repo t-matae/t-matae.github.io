@@ -58,7 +58,7 @@
   let current_send_data = current_send_templete_data;
   let input_send_data = new Array();
 
-  let http_reqest_url = "https://school.yupibow.jp/";
+  let http_reqest_url = "https://school.yupibow.jp";
 
   ////////////////////
   // ブロック処理
@@ -119,7 +119,7 @@
       $.ajax({
         // url: 'http://localhost:8080//',
         // url: local_host_url,
-        url: http_reqest_url,
+        url: `${http_reqest_url}/manipulate/${yupibow_id}`,
         type: 'POST',
         dataType: 'json',
         data: send_data,

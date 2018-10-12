@@ -37,7 +37,7 @@
   // 共通変数
   ////////////////////
 
-  var send_notjson_massage = {jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
+  var send_notjson_massage = {jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:'normal',talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
 
   let current_send_templete_data = {
                             x : 0,
@@ -206,7 +206,7 @@
     }
 
     switch (arg_direction) {
-      case "顔を上に":
+      case '顔を上に':
         current_send_data.y = 7;
         arg_set_data.y = 7;
         break;
@@ -390,23 +390,23 @@
     current_send_data.talk = "";
 
     switch(arg_emotion){
-      case "目をとじている顔":
+      case '目をとじている顔':
         arg_emotion = "close";
         break;
 
-      case "スマイル":
+      case 'スマイル':
         arg_emotion = "smile";
         break;
 
-      case "ふつうの顔":
+      case 'ふつうの顔':
         arg_emotion = "normal";
         break;
 
-      case "怒っている顔":
+      case '怒っている顔':
         arg_emotion = "angry";
         break;
 
-      case "悲しい顔":
+      case '悲しい顔':
         arg_emotion = "sad";
         break;
 
@@ -480,8 +480,8 @@
       move_to_Y_direction: [5,0,-5,-10,-20,-30],
       move_to_Z_direction: [120,100,80,60,40,20,10,5,0,-5,-10,-20,-40,-60,-80,-100,-120],
       speed_range:         [1.0,0.75,0.5,0.25,0.1],
-      emotion_type:        ["normal","close","smile","angry","sad"],
-      emotion_jp_type:     ["目をとじている顔","スマイル","ふつうの顔","怒っている顔","悲しい顔"],
+      emotion_type:        ['normal','close','smile','angry','sad'],
+      emotion_jp_type:     ['目をとじている顔','スマイル','ふつうの顔','怒っている顔','悲しい顔'],
       topic_id:            ["yupibow1","yupibow2","yupibow3","yupibow4","yupibow5","yupibow6"]
     },
   };

@@ -390,23 +390,23 @@
     current_send_data.talk = "";
 
     switch(arg_emotion){
-      case "寝てる":
+      case "目をとじている顔":
         arg_emotion = "close";
         break;
 
-      case "笑顔":
+      case "スマイル":
         arg_emotion = "smile";
         break;
 
-      case "ふつう":
+      case "ふつうの顔":
         arg_emotion = "normal";
         break;
 
-      case "怒っている":
+      case "怒っている顔":
         arg_emotion = "angry";
         break;
 
-      case "悲しい":
+      case "悲しい顔":
         arg_emotion = "sad";
         break;
 
@@ -475,7 +475,7 @@
       [' ', 'うごく速さを %m.speed_range にする',          'set_speed',          0.5         ],
     ],
     menus: {
-      move_to_direction: ['顔を上に','顔を下に','顔を右に','顔を左に','体を右に','体を左に'],
+      move_to_direction:   ['顔を上に','顔を下に','顔を右に','顔を左に','体を右に','体を左に'],
       move_to_X_direction: [10,5,0,-5,-10],
       move_to_Y_direction: [5,0,-5,-10,-20,-30],
       move_to_Z_direction: [120,100,80,60,40,20,10,5,0,-5,-10,-20,-40,-60,-80,-100,-120],

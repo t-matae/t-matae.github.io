@@ -58,9 +58,7 @@
   let current_send_data = current_send_templete_data;
   let input_send_data = new Array();
 
-  let http_reqest_url = "http://192.168.16.150:8080/";
-  let local_host_url = "http://localhost:8081/";
-
+  let http_reqest_url = "https://school.yupibow.jp";
 
   ////////////////////
   // ブロック処理
@@ -121,7 +119,7 @@
       $.ajax({
         // url: 'http://localhost:8080//',
         // url: local_host_url,
-        url: http_reqest_url,
+        url: `${http_reqest_url}/manipulates`,
         type: 'POST',
         dataType: 'json',
         data: send_data,
@@ -482,7 +480,7 @@
       speed_range:         [1.0,0.75,0.5,0.25,0.1],
       emotion_type:        ['normal','close','smile','angry','sad'],
       emotion_jp_type:     ['目をとじている顔','スマイル','ふつうの顔','怒っている顔','悲しい顔'],
-      topic_id:            ["yupibow1","yupibow2","yupibow3","yupibow4","yupibow5","yupibow6"]
+      topic_id:            ["yupibow1","yupibow2","yupibow3","yupibow4","yupibow5","yupibow6","80300012","80300013","80300014","80300015","80300016"]
     },
   };
 

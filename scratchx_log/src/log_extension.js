@@ -123,7 +123,7 @@
         type: 'POST',
         contentType: 'application/json',
         dataType: "json",
-        data: send_data,
+        data: send_notjson_massage,
       });
     }
   };

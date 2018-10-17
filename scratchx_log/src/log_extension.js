@@ -114,7 +114,8 @@
       send_notjson_massage.jobs[0].operation.actions = input_send_data;
       send_notjson_massage.jobs[0].topic = yupibow_id;
       var send_data = JSON.stringify(send_notjson_massage);
-      // alert(send_data);
+      console.log(send_data);
+      console.log(send_notjson_massage);
 
       $.ajax({
         // url: 'http://localhost:8080//',
@@ -123,7 +124,7 @@
         type: 'POST',
         contentType: 'application/json',
         dataType: "json",
-        data: send_notjson_massage,
+        data: send_data,
       });
     }
   };

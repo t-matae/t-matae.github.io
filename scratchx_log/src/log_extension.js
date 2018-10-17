@@ -121,7 +121,8 @@
         // url: local_host_url,
         url: `${http_reqest_url}/api/manipulates`,
         type: 'POST',
-        dataType: 'json',
+        contentType: 'application/json',
+        dataType: "json",
         data: send_data,
       });
     }

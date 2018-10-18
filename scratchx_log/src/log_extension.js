@@ -139,19 +139,19 @@
     // alert(JSON.stringify(current_send_templete_data));
     // alert(JSON.stringify(current_send_data));
 
-  }
+  };
 
 
   // 入力変数 内容表示
   ext.current_input_message_button = () => {
     return JSON.stringify(input_send_data);
-  }
+  };
 
 
   // 設定済み 変数内容表示
   ext.current_message_button = () => {
     return JSON.stringify(current_send_data);
-  }
+  };
 
   // ユピ坊にしゃべらせるブロック
   ext.speak_sentences = (arg_talk) => {
@@ -188,7 +188,6 @@
                           z : current_send_data.z,
                           speed : current_send_data.speed,
                           emotion : current_send_data.emotion,
-                          talk : current_send_data.talk,
                           gaze : "on",
                           cheeks : "red",
                           eyecolor : "aqua",
@@ -198,7 +197,6 @@
                           reset : "false"
                         };
 
-    arg_set_data.talk = "";
     current_send_data.talk = "";
 
     if(current_send_data.speed == 0){
@@ -245,7 +243,7 @@
   };
 
 
-  // ユピ坊の動き設定ブロック：単一方向  顔を下げる
+  // 初期位置から動作開始
   ext.move_to_init = () => {
 
     let arg_set_data = {
@@ -254,7 +252,6 @@
                           z : current_send_data.z,
                           speed : current_send_data.speed,
                           emotion : current_send_data.emotion,
-                          talk : current_send_data.talk,
                           gaze : "on",
                           cheeks : "red",
                           eyecolor : "aqua",
@@ -264,7 +261,6 @@
                           reset : "false"
                         };
 
-    arg_set_data.talk = "";
     current_send_data.talk = "";
 
     current_send_data.x = 0;
@@ -281,7 +277,7 @@
 
 
 
-  // ユピ坊の動き設定ブロック：単一方向  上下
+  // 顔を上下に %m.move_to_Y_direction 度動かす
   ext.move_to_updown = (arg_updown) => {
 
     let arg_set_data = {
@@ -290,7 +286,6 @@
                           z : current_send_data.z,
                           speed : current_send_data.speed,
                           emotion : current_send_data.emotion,
-                          talk : current_send_data.talk,
                           gaze : "on",
                           cheeks : "red",
                           eyecolor : "aqua",
@@ -300,7 +295,6 @@
                           reset : "false"
                         };
 
-    arg_set_data.talk = "";
     current_send_data.talk = "";
 
     current_send_data.y = arg_updown;
@@ -310,7 +304,7 @@
   };
 
 
-  // ユピ坊の動き設定ブロック：単一方向  左右
+  // 体を左右に %m.move_to_Z_direction 度動かす
   ext.move_to_leftright = (arg_leftright) => {
 
     let arg_set_data = {
@@ -319,7 +313,6 @@
                           z : current_send_data.z,
                           speed : current_send_data.speed,
                           emotion : current_send_data.emotion,
-                          talk : current_send_data.talk,
                           gaze : "on",
                           cheeks : "red",
                           eyecolor : "aqua",
@@ -329,7 +322,6 @@
                           reset : "false"
                         };
 
-    arg_set_data.talk = "";
     current_send_data.talk = "";
 
     current_send_data.z = arg_leftright;
@@ -339,7 +331,7 @@
   };
 
 
-  // ユピ坊の動き設定ブロック：単一方向  右左回
+  // 顔を左右に %m.move_to_X_direction 度回す
   ext.move_to_rotation = (arg_rotation) => {
 
     let arg_set_data = {
@@ -348,7 +340,6 @@
                           z : current_send_data.z,
                           speed : current_send_data.speed,
                           emotion : current_send_data.emotion,
-                          talk : current_send_data.talk,
                           gaze : "on",
                           cheeks : "red",
                           eyecolor : "aqua",
@@ -358,7 +349,6 @@
                           reset : "false"
                         };
 
-    arg_set_data.talk = "";
     current_send_data.talk = "";
 
     current_send_data.x = arg_rotation;
@@ -367,7 +357,7 @@
 
   };
 
-  // ユピ坊の動き設定ブロック：単一方向  右左回
+  // 気分を %m.emotion_jp_type にする
   ext.set_emotion = (arg_emotion) => {
 
     let arg_set_data = {
@@ -376,7 +366,6 @@
                           z : current_send_data.z,
                           speed : current_send_data.speed,
                           emotion : current_send_data.emotion,
-                          talk : current_send_data.talk,
                           gaze : "on",
                           cheeks : "red",
                           eyecolor : "aqua",
@@ -386,7 +375,6 @@
                           reset : "false"
                         };
 
-    arg_set_data.talk = "";
     current_send_data.talk = "";
 
     switch(arg_emotion){
@@ -421,7 +409,7 @@
 
   };
 
-  // ユピ坊の動き設定ブロック：単一方向  右左回
+  // うごく速さを %m.speed_range にする
   ext.set_speed = (arg_speed) => {
 
     let arg_set_data = {
@@ -430,7 +418,6 @@
                           z : current_send_data.z,
                           speed : current_send_data.speed,
                           emotion : current_send_data.emotion,
-                          talk : current_send_data.talk,
                           gaze : "on",
                           cheeks : "red",
                           eyecolor : "aqua",
@@ -440,11 +427,10 @@
                           reset : "false"
                         };
 
-    arg_set_data.talk = "";
     current_send_data.talk = "";
 
-    current_send_data.emotion = arg_speed;
-    arg_set_data.emotion = arg_speed;
+    current_send_data.speed = arg_speed;
+    arg_set_data.speed = arg_speed;
     input_send_data.push(arg_set_data);
 
   };

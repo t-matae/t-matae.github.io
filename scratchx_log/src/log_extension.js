@@ -24,7 +24,6 @@
   // debug用
   // no operation
   ext.no_operation = () => {
-     // no operation
   };
 
   // ScratchX上でlog表示
@@ -37,23 +36,23 @@
   // 共通変数
   ////////////////////
 
-  var send_notjson_massage = {jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:'normal',talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
+  var send_notjson_massage = {jobs:[{operation:{startTime:"2017-12-22 14:20:38.688",touchFlag:"false",actions:[{x:'direction_x',y:'direction_y',z:'direction_z',speed:'speed',emotion:"normal",talk:'sentences',gaze:"on",cheeks:"red",eyecolor:"aqua",complexioncolor:"red",transmittance:0,delay:0,reset:"false"}]},schedule:"******",topic:"yupibow1"}]};
 
   let current_send_templete_data = {
-                            x : 0,
-                            y : 0,
-                            z : 0,
-                            speed : 0.0,
-                            emotion : "normal",
-                            talk : "",
-                            gaze : "on",
-                            cheeks : "red",
-                            eyecolor : "aqua",
-                            complexioncolor : "red",
-                            transmittance : 0,
-                            delay : 0,
-                            reset : "false"
-                          };
+    x : 0,
+    y : 0,
+    z : 0,
+    speed : 0.0,
+    emotion : "normal",
+    talk : "",
+    gaze : "on",
+    cheeks : "red",
+    eyecolor : "aqua",
+    complexioncolor : "red",
+    transmittance : 0,
+    delay : 0,
+    reset : "false"
+  };
 
   let current_send_data = current_send_templete_data;
   let input_send_data = new Array();
@@ -72,20 +71,20 @@
   ext.multi_setting_button = ( arg_x, arg_y, arg_z, arg_speed, arg_emotion, arg_talk) => {
 
     let arg_set_data = {
-                          x : arg_x,
-                          y : arg_y,
-                          z : arg_z,
-                          speed : arg_speed,
-                          emotion : arg_emotion,
-                          talk : arg_talk,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : arg_x,
+      y : arg_y,
+      z : arg_z,
+      speed : arg_speed,
+      emotion : arg_emotion,
+      talk : arg_talk,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.x = arg_x;
     current_send_data.y = arg_y;
@@ -157,20 +156,20 @@
   ext.speak_sentences = (arg_talk) => {
 
     let arg_set_data = {
-                          x : current_send_data.x,
-                          y : current_send_data.y,
-                          z : current_send_data.z,
-                          speed : current_send_data.speed,
-                          emotion : current_send_data.emotion,
-                          talk : current_send_data.talk,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : current_send_data.x,
+      y : current_send_data.y,
+      z : current_send_data.z,
+      speed : current_send_data.speed,
+      emotion : current_send_data.emotion,
+      talk : current_send_data.talk,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.talk = arg_talk;
     arg_set_data.talk = arg_talk;
@@ -183,19 +182,19 @@
   ext.move_to_mulit_direction = (arg_direction) => {
 
     let arg_set_data = {
-                          x : current_send_data.x,
-                          y : current_send_data.y,
-                          z : current_send_data.z,
-                          speed : current_send_data.speed,
-                          emotion : current_send_data.emotion,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : current_send_data.x,
+      y : current_send_data.y,
+      z : current_send_data.z,
+      speed : current_send_data.speed,
+      emotion : current_send_data.emotion,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.talk = "";
 
@@ -204,7 +203,7 @@
     }
 
     switch (arg_direction) {
-      case '顔を上に':
+      case "顔を上に":
         current_send_data.y = 7;
         arg_set_data.y = 7;
         break;
@@ -247,19 +246,19 @@
   ext.move_to_init = () => {
 
     let arg_set_data = {
-                          x : current_send_data.x,
-                          y : current_send_data.y,
-                          z : current_send_data.z,
-                          speed : current_send_data.speed,
-                          emotion : current_send_data.emotion,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : current_send_data.x,
+      y : current_send_data.y,
+      z : current_send_data.z,
+      speed : current_send_data.speed,
+      emotion : current_send_data.emotion,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.talk = "";
 
@@ -281,19 +280,19 @@
   ext.move_to_updown = (arg_updown) => {
 
     let arg_set_data = {
-                          x : current_send_data.x,
-                          y : current_send_data.y,
-                          z : current_send_data.z,
-                          speed : current_send_data.speed,
-                          emotion : current_send_data.emotion,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : current_send_data.x,
+      y : current_send_data.y,
+      z : current_send_data.z,
+      speed : current_send_data.speed,
+      emotion : current_send_data.emotion,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.talk = "";
 
@@ -308,19 +307,19 @@
   ext.move_to_leftright = (arg_leftright) => {
 
     let arg_set_data = {
-                          x : current_send_data.x,
-                          y : current_send_data.y,
-                          z : current_send_data.z,
-                          speed : current_send_data.speed,
-                          emotion : current_send_data.emotion,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : current_send_data.x,
+      y : current_send_data.y,
+      z : current_send_data.z,
+      speed : current_send_data.speed,
+      emotion : current_send_data.emotion,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.talk = "";
 
@@ -335,19 +334,19 @@
   ext.move_to_rotation = (arg_rotation) => {
 
     let arg_set_data = {
-                          x : current_send_data.x,
-                          y : current_send_data.y,
-                          z : current_send_data.z,
-                          speed : current_send_data.speed,
-                          emotion : current_send_data.emotion,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : current_send_data.x,
+      y : current_send_data.y,
+      z : current_send_data.z,
+      speed : current_send_data.speed,
+      emotion : current_send_data.emotion,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.talk = "";
 
@@ -361,40 +360,40 @@
   ext.set_emotion = (arg_emotion) => {
 
     let arg_set_data = {
-                          x : current_send_data.x,
-                          y : current_send_data.y,
-                          z : current_send_data.z,
-                          speed : current_send_data.speed,
-                          emotion : current_send_data.emotion,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : current_send_data.x,
+      y : current_send_data.y,
+      z : current_send_data.z,
+      speed : current_send_data.speed,
+      emotion : current_send_data.emotion,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.talk = "";
 
     switch(arg_emotion){
-      case '目をとじている顔':
+      case "寝てる":
         arg_emotion = "close";
         break;
 
-      case 'スマイル':
+      case "笑顔":
         arg_emotion = "smile";
         break;
 
-      case 'ふつうの顔':
+      case "ふつう":
         arg_emotion = "normal";
         break;
 
-      case '怒っている顔':
+      case "怒っている":
         arg_emotion = "angry";
         break;
 
-      case '悲しい顔':
+      case "悲しい":
         arg_emotion = "sad";
         break;
 
@@ -413,19 +412,19 @@
   ext.set_speed = (arg_speed) => {
 
     let arg_set_data = {
-                          x : current_send_data.x,
-                          y : current_send_data.y,
-                          z : current_send_data.z,
-                          speed : current_send_data.speed,
-                          emotion : current_send_data.emotion,
-                          gaze : "on",
-                          cheeks : "red",
-                          eyecolor : "aqua",
-                          complexioncolor : "red",
-                          transmittance : 0,
-                          delay : 0,
-                          reset : "false"
-                        };
+      x : current_send_data.x,
+      y : current_send_data.y,
+      z : current_send_data.z,
+      speed : current_send_data.speed,
+      emotion : current_send_data.emotion,
+      gaze : "on",
+      cheeks : "red",
+      eyecolor : "aqua",
+      complexioncolor : "red",
+      transmittance : 0,
+      delay : 0,
+      reset : "false"
+    };
 
     current_send_data.talk = "";
 
@@ -440,14 +439,8 @@
   var descriptor = {
     blocks: [
       // 共通ブロック
-      [' ', ' %m.topic_id に命令を送信', 'message_send_button',         "yupibow1" ],
+      [' ', ' %s に命令を送信', 'message_send_button',         "yupibow1" ],
       [' ', ' 初期設定 ',           'message_clear_button'                    ],
-      // ['r', ' Debug : current_input_message ',   'current_input_message_button'            ],
-      // ['r', ' Debug : current_message ',         'current_message_button'                  ],
-
-      // 複合ブロック
-      // [' ', ' 顔上下 : %n , 体左右 : %n , 顔傾き : %n , うごく速さ : %n , 表情 : %s , 話す内容 : %s  ',  'multi_setting_button' , 0, 0, 0, 0.0, "normal", "初期値"],
-      // [' ', ' X: %m.move_to_X_direction Y: %m.move_to_Y_direction Z: %m.move_to_Z_direction speed: %m.speed_range emotion : %m.emotion_type talk : %s ',  'multi_setting_button' , 0, 0, 0, 0.0, "normal", ""],
 
       [' ', '初期位置から動作開始',                 'move_to_init'                 ],
       [' ', '%s としゃべらせる',           'speak_sentences',            'ぼく、ユピ坊！' ],
@@ -461,14 +454,13 @@
       [' ', 'うごく速さを %m.speed_range にする',          'set_speed',          0.5         ],
     ],
     menus: {
-      move_to_direction:   ['顔を上に','顔を下に','顔を右に','顔を左に','体を右に','体を左に'],
+      move_to_direction: ['顔を上に','顔を下に','顔を右に','顔を左に','体を右に','体を左に'],
       move_to_X_direction: [10,5,0,-5,-10],
       move_to_Y_direction: [5,0,-5,-10,-20,-30],
       move_to_Z_direction: [120,100,80,60,40,20,10,5,0,-5,-10,-20,-40,-60,-80,-100,-120],
       speed_range:         [1.0,0.75,0.5,0.25,0.1],
-      emotion_type:        ['normal','close','smile','angry','sad'],
-      emotion_jp_type:     ['目をとじている顔','スマイル','ふつうの顔','怒っている顔','悲しい顔'],
-      topic_id:            ["yupibow1","yupibow2","yupibow3","yupibow4","yupibow5","yupibow6","80300012","80300013","80300014","80300015","80300016"]
+      emotion_type:        ["normal","close","smile","angry","sad"],
+      emotion_jp_type:     ["目をとじている顔","スマイル","ふつうの顔","怒っている顔","悲しい顔"],
     },
   };
 
